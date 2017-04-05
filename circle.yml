@@ -4,9 +4,9 @@ machine:
 
 dependencies:
   override:
-    - if[[ "$CIRCULE_BRANCH" == staging ]]; then docker build -f Dockerfile.staging -t kster/sample-node .; fi;
-    - if[[ "$CIRCULE_BRANCH" == qa ]]; then docker build -f Dockerfile.qa -t kster/sample-node .; fi;
-    - if[[ "$CIRCULE_BRANCH" != staging ]] && if[[ "$CIRCULE_BRANCH" != qa ]] then docker build -t kster/sample-node .; fi;
+    - if [[ "$CIRCULE_BRANCH" == staging ]]; then docker build -f Dockerfile.staging -t kster/sample-node .; fi;
+    - if [[ "$CIRCULE_BRANCH" == qa ]]; then docker build -f Dockerfile.qa -t kster/sample-node .; fi;
+    - if [[ "$CIRCULE_BRANCH" != staging ]] && if[[ "$CIRCULE_BRANCH" != qa ]]; then docker build -t kster/sample-node .; fi;
 test:
   override:
     - docker run kster/sample-node npm test
