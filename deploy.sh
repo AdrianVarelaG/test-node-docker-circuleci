@@ -1,5 +1,5 @@
 #!/bin/bash
-docker build -t kster/sample-node .
+#docker build -t kster/sample-node .
 docker push kster/sample-node
 
 ssh deploy@104.154.207.199 << EOF
