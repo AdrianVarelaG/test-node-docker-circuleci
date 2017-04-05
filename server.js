@@ -8,7 +8,7 @@ express()
     db("users").then(function(data) {
       res.send(data);
     });*/
-    res.send("ok");
+    res.send("ok ya con network");
  })
  .listen(3000, function(err) {
     if (err) {
