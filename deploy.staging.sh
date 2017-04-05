@@ -7,6 +7,6 @@ docker pull kster/sample-node:staging
 docker stop web || true
 docker rm web || true
 docker rmi kster/sample-node:current || true
-docker tag kster/sample-node:latest kster/sample-node:staging
+docker tag kster/sample-node:staging kster/sample-node:current
 docker run -d --net app --restart always --name web -p 3000:3000 kster/sample-node:current
 EOF
